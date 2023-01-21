@@ -30,6 +30,8 @@ import '../modules/pengumuman_kelas/bindings/pengumuman_kelas_binding.dart';
 import '../modules/pengumuman_kelas/views/pengumuman_kelas_view.dart';
 import '../modules/profil/bindings/profil_binding.dart';
 import '../modules/profil/views/profil_view.dart';
+import '../modules/rekap_nilai/bindings/rekap_nilai_binding.dart';
+import '../modules/rekap_nilai/views/rekap_nilai_view.dart';
 
 part 'app_routes.dart';
 
@@ -113,6 +115,11 @@ class AppPages {
       name: _Paths.PENGUMUMAN_KELAS,
       page: () => const PengumumanKelasView(),
       binding: PengumumanKelasBinding(),
+    ),
+    GetPage(
+      name: _Paths.REKAP_NILAI,
+      page: () => const RekapNilaiView(),
+      binding: RekapNilaiBinding(),
     ),
   ];
 }
