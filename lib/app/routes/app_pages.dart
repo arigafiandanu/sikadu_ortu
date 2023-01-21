@@ -118,7 +118,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.REKAP_NILAI,
-      page: () => const RekapNilaiView(),
+      page: () => RekapNilaiView(),
       binding: RekapNilaiBinding(),
     ),
   ];

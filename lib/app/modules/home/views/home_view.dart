@@ -109,7 +109,7 @@ class HomeView extends GetView<HomeController> {
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: SizedBox(
                 width: Get.width,
-                height: Get.height * 0.02,
+                height: Get.height * 0.03,
                 child: const Text(
                   "Dashboard Orang Tua",
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
