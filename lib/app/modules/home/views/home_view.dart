@@ -163,18 +163,18 @@ class HomeView extends GetView<HomeController> {
                     ),
                     kategori: "Pelajaran",
                   ),
-                  cardhomepage(
-                    ontap: () {
-                      Get.toNamed(Routes.INFORMASI_LAINNYA);
-                    },
-                    warnaTerang: AppColors.grayshade,
-                    warna: AppColors.blue,
-                    icon: const Icon(
-                      Icons.book,
-                      size: 35,
-                    ),
-                    kategori: "Informasi Lainnya",
-                  ),
+                  // cardhomepage(
+                  //   ontap: () {
+                  //     Get.toNamed(Routes.INFORMASI_LAINNYA);
+                  //   },
+                  //   warnaTerang: AppColors.grayshade,
+                  //   warna: AppColors.blue,
+                  //   icon: const Icon(
+                  //     Icons.book,
+                  //     size: 35,
+                  //   ),
+                  //   kategori: "Informasi Lainnya",
+                  // ),
                 ],
               ),
             ),

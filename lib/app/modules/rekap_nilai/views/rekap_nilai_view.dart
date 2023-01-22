@@ -275,7 +275,6 @@ class RekapNilaiView extends GetView<RekapNilaiController> {
         itemBuilder: ((context, index) {
           var dataPelajaranIndex = dataPelajaran[index].data();
           var pelajaran = dataPelajaranIndex['pelajaran'];
-
           var grade = gradeData?['nilai'][kelas]?['semester 2']?[pelajaran];
           var gradeUts = grade?['nilaiUts'] ?? "0";
           var gradeSemester = grade?['nilaiSemester'] ?? "0";
