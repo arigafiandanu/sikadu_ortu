@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 
 import '../controllers/detail_pengumuman_controller.dart';
 
@@ -9,7 +10,7 @@ class DetailPengumumanView extends GetView<DetailPengumumanController> {
   const DetailPengumumanView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-      var dataPengumuman = Get.arguments;
+    var dataPengumuman = Get.arguments;
     List<Container> tempImage =
         (dataPengumuman['fotoPengumuman'] as List).map((item) {
       return Container(
@@ -89,7 +90,8 @@ class DetailPengumumanView extends GetView<DetailPengumumanController> {
                 padding: const EdgeInsets.only(left: 10, right: 10),
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  dataPengumuman['tanggalBuat'],
+                  (DateFormat.yMMMMd()
+                      .format(DateTime.parse(dataPengumuman['tanggalBuat']))),
                   style: const TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.w300,

@@ -1,23 +1,21 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 
 class PengumumanKelasController extends GetxController {
-  //TODO: Implement PengumumanKelasController
+  FirebaseAuth auth = FirebaseAuth.instance;
+  FirebaseFirestore firestore = FirebaseFirestore.instance;
 
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
+  Stream<QuerySnapshot<Object?>> streamPengumuman() async* {
+    var kelas = await firestore
+        .collection("Siswa")
+        .doc(auth.currentUser!.email)
+        .get()
+        .then((value) => value.data()?['kelas']);
+
+    Query<Map<String, dynamic>> pengumuman = firestore
+        .collection("pengumuman")
+        .where("kategoriPenerima", isEqualTo: kelas);
+    yield* pengumuman.snapshots();
   }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
 }

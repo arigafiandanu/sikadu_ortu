@@ -206,7 +206,7 @@ class HomeView extends GetView<HomeController> {
                       },
                       colorCard: (Colors.indigo[50])!,
                       splashColor: (Colors.indigoAccent.withAlpha(50)),
-                      title: "Kelola Pengumuman",
+                      title: "Semua Pengumuman",
                       jumlahSiswa: "Info $jmlPengumuman",
                       icon: const Icon(
                         Icons.add_alert_rounded,

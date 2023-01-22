@@ -45,7 +45,7 @@ class HomeController extends GetxController {
   }
 
   Stream<QuerySnapshot<Object?>> streamJmlPengumuman() {
-    Query<Map<String, dynamic>> pengumuman = firestore.collection("pengumuman");
+    Query<Map<String, dynamic>> pengumuman = firestore.collection("pengumuman").where("kategoriPenerima", isEqualTo: "Semua");
     return pengumuman.snapshots();
   }
 }
